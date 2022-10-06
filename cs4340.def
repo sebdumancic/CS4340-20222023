@@ -1,0 +1,8 @@
+Bootstrap: docker
+From: julia:1.8.2-bullseye
+
+%post
+    julia -e 'import Pkg; Pkg.add("Gen")'
+
+%runscript
+    julia -e 'using Gen'
